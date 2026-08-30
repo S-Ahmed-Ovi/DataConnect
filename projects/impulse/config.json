@@ -1,0 +1,16 @@
+{
+  "project_id": "impulse",
+  "sources": {
+    "impulse": {
+      "dialect": "postgres",
+      "host": "62.171.148.12",
+      "port": 5432,
+      "database": "impulse_lsm",
+      "username": "postgres",
+      "password": "104116",
+      "ssl": true,
+      "connect_timeout": 30,
+      "kind": "sql"
+    }
+  }
+}

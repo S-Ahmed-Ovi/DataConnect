@@ -1,0 +1,30 @@
+# Core (always required)
+pandas>=2.0
+sqlalchemy>=2.0
+
+# File formats
+openpyxl        # Excel (.xlsx)
+pyarrow         # Parquet
+
+# SQL drivers — install only the dialects you actually connect to
+psycopg2-binary # PostgreSQL
+pymysql         # MySQL / MariaDB
+# pyodbc        # SQL Server (needs system ODBC driver too)
+# sqlite: no driver needed, built into Python
+
+# NoSQL
+# pymongo       # MongoDB
+
+# Secure Tunnel — SSH/Bastion access to bastion-only databases
+# sshtunnel
+# paramiko
+
+# Secure Tunnel — Customer VPN (WireGuard/OpenVPN) access
+# No pip package needed: requires `wireguard-tools` (wg-quick) and/or
+# `openvpn` installed as SYSTEM packages on the host, e.g.:
+#   apt-get install wireguard-tools openvpn
+
+# FastAPI test harness (main.py)
+fastapi
+uvicorn[standard]
+python-multipart
