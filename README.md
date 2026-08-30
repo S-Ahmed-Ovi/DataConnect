@@ -25,7 +25,7 @@ A standalone folder whose only job is:
                      (WireGuard/OpenVPN/etc.)
             +----+----+
                  |
-                 DB
+                 
    ```
 
 2. Accept file uploads (CSV / Excel / JSON / Parquet) per project.
@@ -39,7 +39,7 @@ No dependency on any larger app. Drop this folder wherever you like. A
 
 ```bash
 pip install -r requirements.txt
-# plus whichever DB drivers you actually need (see comments in the file)
+# plus whichever  drivers you actually need (see comments in the file)
 # and sshtunnel + paramiko if any source needs an SSH/bastion tunnel
 # and, for Customer VPN sources, the SYSTEM packages wireguard-tools
 # and/or openvpn (not a pip install — see requirements.txt)
@@ -64,7 +64,7 @@ projects/
 ## Quickstart
 
 ```python
-from db_project.manager import ProjectManager
+from DataConnect.manager import ProjectManager
 
 pm = ProjectManager()
 pm.create_project("acme")
@@ -169,11 +169,11 @@ so no backend changes are needed beyond the CORS middleware already added to
 
 ## VPN config file (`vpn.config_path`)
 
-`db_project` never generates or stores WireGuard/OpenVPN keys — the
+`DataConnect` never generates or stores WireGuard/OpenVPN keys — the
 customer/network team hands you a ready-made config file and you just point
 `config_path` at it:
 
-- **WireGuard**: a `.conf` file (your private key, the DB-side peer's public
+- **WireGuard**: a `.conf` file (your private key, the -side peer's public
   key + `AllowedIPs`, `Endpoint`, etc.), managed via `wg-quick up|down`.
 - **OpenVPN**: a `.ovpn`/`.conf` file, optionally plus a separate
   `auth_user_pass_path` credentials file, run via `openvpn --config ... --daemon`.
