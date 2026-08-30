@@ -1,4 +1,4 @@
-# db_project dashboard — Analyst Console
+# DataConnect dashboard — Analyst Console
 
 A universal, schema-agnostic dashboard for data analysts. It's a plain React +
 Vite frontend that talks to the existing `db_project` FastAPI app (`main.py`)
