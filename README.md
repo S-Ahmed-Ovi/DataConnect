@@ -620,7 +620,7 @@ Install:
 openvpn
 ```
 
-These are **not Python packages** and therefore are not installed with:
+These are **not Python packages** and therefore are not installed with
 
 ```bash
 pip install -r requirements.txt
